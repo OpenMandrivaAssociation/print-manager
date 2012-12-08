@@ -49,3 +49,10 @@ Printer management for KDE.
 %{_datadir}/dbus-1/services/org.kde.ConfigurePrinter.service
 %{_datadir}/dbus-1/services/org.kde.PrintQueue.service
 
+
+
+%changelog
+* Fri Aug 31 2012 Andrey Bondrov <abondrov@mandriva.org> 0.2.0-1
++ Revision: 816127
+- imported package kde-print-manager
+

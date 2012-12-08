@@ -1,0 +1,4 @@
+# Workarounds for rpmlint being on crack (thinking something is a library
+# package because it contains *.so* files even if they're kdeinit modules
+# or the likes)
+addFilter("E: non-versioned-file-in-library-package")
