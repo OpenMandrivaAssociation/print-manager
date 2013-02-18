@@ -1,16 +1,19 @@
 Summary:	Printer management for KDE
 Name:		kde-print-manager
-Version:	0.2.0
+Version:	4.10.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 URL:		https://projects.kde.org/projects/playground/base/print-manager
-Source0:	http://download.kde.org/stable/print-manager/%{version}/src/print-manager-%{version}.tar.bz2
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	kde-print-manager.rpmlintrc
 BuildRequires:	gettext
 BuildRequires:	kdelibs4-devel
 BuildRequires:	cups-devel
 Requires:	kdebase4-runtime
+Obsoletes:	kdeutils4-printer-applet < 4.10.0
+Obsoletes:	system-config-printer-kde < 2:4.10.0
+Provides:	system-config-printer-kde = 2:%{version}-%{release}
 
 %description
 Printer management for KDE.
@@ -25,9 +28,7 @@ Printer management for KDE.
 %install
 %makeinstall_std -C build
 
-%find_lang %{name} --all-name
-
-%files -f %{name}.lang
+%files
 %{_kde_libdir}/kde4/kcm_printer_manager.so
 %{_kde_libdir}/kde4/kded_printmanager.so
 %{_kde_libdir}/kde4/libexec/add-printer
@@ -49,9 +50,13 @@ Printer management for KDE.
 %{_datadir}/dbus-1/services/org.kde.ConfigurePrinter.service
 %{_datadir}/dbus-1/services/org.kde.PrintQueue.service
 
-
-
 %changelog
+* Mon Feb 18 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
+- New version 4.10.0
+- Now it's an official KDE replacement of system-config-printer-kde
+  and kdeutils4-printer-applet
+- No longer ships locale files in tarball
+
 * Fri Aug 31 2012 Andrey Bondrov <abondrov@mandriva.org> 0.2.0-1
 + Revision: 816127
 - imported package kde-print-manager
