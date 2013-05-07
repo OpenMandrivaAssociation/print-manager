@@ -1,6 +1,6 @@
 Summary:	Printer management for KDE
 Name:		kde-print-manager
-Version:	4.10.2
+Version:	4.10.3
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -51,6 +51,9 @@ Printer management for KDE.
 %{_datadir}/dbus-1/services/org.kde.PrintQueue.service
 
 %changelog
+* Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
+- New version 4.10.3
+
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
 - New version 4.10.2
 
