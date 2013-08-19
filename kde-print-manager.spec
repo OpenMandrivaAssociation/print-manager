@@ -4,7 +4,7 @@ Version:	4.11.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-URL:		https://projects.kde.org/projects/playground/base/print-manager
+Url:		https://projects.kde.org/projects/playground/base/print-manager
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	kde-print-manager.rpmlintrc
 BuildRequires:	gettext
@@ -18,6 +18,24 @@ Provides:	system-config-printer-kde = 2:%{version}-%{release}
 %description
 Printer management for KDE.
 
+%files
+%{_kde_bindir}/kde-add-printer
+%{_kde_bindir}/kde-print-queue
+%{_kde_libdir}/kde4/kcm_printer_manager.so
+%{_kde_libdir}/kde4/kded_printmanager.so
+%{_kde_libdir}/kde4/imports/org/kde/printmanager
+%{_kde_libdir}/kde4/libexec/configure-printer
+%{_kde_libdir}/libkcupslib.so
+%{_kde_appsdir}/plasma/plasmoids/org.kde.printmanager
+%{_kde_appsdir}/printmanager
+%{_kde_plugindir}/designer/printmanagerwidget.so
+%{_kde_services}/kcm_printer_manager.desktop
+%{_kde_services}/kded/printmanager.desktop
+%{_kde_services}/plasma-applet-printmanager.desktop
+%{_datadir}/dbus-1/services/org.kde.ConfigurePrinter.service
+
+#----------------------------------------------------------------------------
+
 %prep
 %setup -q -n print-manager-%{version}
 
@@ -28,31 +46,10 @@ Printer management for KDE.
 %install
 %makeinstall_std -C build
 
-%files
-%{_kde_libdir}/kde4/kcm_printer_manager.so
-%{_kde_libdir}/kde4/kded_printmanager.so
-%{_kde_libdir}/kde4/libexec/add-printer
-%{_kde_libdir}/kde4/libexec/configure-printer
-%{_kde_libdir}/kde4/libexec/print-queue
-%{_kde_libdir}/kde4/plasma_engine_printers.so
-%{_kde_libdir}/kde4/plasma_engine_printjobs.so
-%{_kde_libdir}/libkcupslib.so
-%{_kde_appsdir}/plasma/plasmoids/printmanager
-%{_kde_appsdir}/plasma/services/org.kde.printers.operations
-%{_kde_appsdir}/plasma/services/org.kde.printjobs.operations
-%{_kde_appsdir}/printmanager
-%{_kde_services}/kcm_printer_manager.desktop
-%{_kde_services}/kded/printmanager.desktop
-%{_kde_services}/plasma-applet-printmanager.desktop
-%{_kde_services}/plasma-engine-printers.desktop
-%{_kde_services}/plasma-engine-printjobs.desktop
-%{_datadir}/dbus-1/services/org.kde.AddPrinter.service
-%{_datadir}/dbus-1/services/org.kde.ConfigurePrinter.service
-%{_datadir}/dbus-1/services/org.kde.PrintQueue.service
-
 %changelog
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.0-1
 - New version 4.11.0
+- Update files list
 
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
 - New version 4.10.5
