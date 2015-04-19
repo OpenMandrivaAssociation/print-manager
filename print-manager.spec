@@ -1,16 +1,16 @@
 Summary:	Printer management for KDE
-Name:		kde-print-manager
+Name:		print-manager
 Version:	4.14.3
 Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version}.tar.xz
-Source1:	kde-print-manager.rpmlintrc
+Source1:	print-manager.rpmlintrc
 BuildRequires:	gettext
 BuildRequires:	kdelibs4-devel
 BuildRequires:	cups-devel
-Requires:	kdebase4-runtime
+Requires:	kde-runtime
 Obsoletes:	kdeutils4-printer-applet < 4.10.0
 Obsoletes:	system-config-printer-kde < 2:4.10.0
 Provides:	system-config-printer-kde = 2:%{version}-%{release}
