@@ -1,7 +1,7 @@
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	4.14.3
-Release:	2
+Version:	15.04.0
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
