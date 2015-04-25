@@ -35,6 +35,9 @@ Printer management for KDE.
 
 %files
 %{_bindir}/configure-printer
+%{_bindir}/kde-add-printer
+%{_bindir}/kde-print-queue
+%{_libdir}/libkcupslib.so
 %{_libdir}/qt5/plugins/kcm_printer_manager.so
 %{_libdir}/qt5/plugins/kded_printmanager.so
 %{_libdir}/qt5/qml/org/kde/plasma/printmanager/libprintmanager.so
@@ -45,6 +48,7 @@ Printer management for KDE.
 %{_datadir}/kservices5/*.desktop
 %{_datadir}/kservices5/kded/printmanager.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.qml
+%{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/*.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/metadata.desktop
 %{_datadir}/printmanager/printmanager.notifyrc
