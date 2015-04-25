@@ -7,6 +7,8 @@ License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	print-manager.rpmlintrc
+BuildRequires:	cmake(ECM)
+BuildRequires:	ninja
 BuildRequires:	gettext
 BuildRequires:	kdelibs4-devel
 BuildRequires:	cups-devel
@@ -40,11 +42,14 @@ Printer management for KDE.
 %setup -q -n print-manager-%{version}
 
 %build
-%cmake_kde4 -DLIBEXEC_INSTALL_DIR:PATH=%{_kde_libdir}/kde4/libexec
-%make
+%cmake_kde5
+ninja -C build
 
 %install
-%makeinstall_std -C build
+DESTDIR="%{buildroot}" ninja install -C build
+
+
+
 
 %changelog
 * Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
