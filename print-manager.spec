@@ -9,6 +9,19 @@ Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version
 Source1:	print-manager.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	ninja
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5ConfigWidgets)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5IconThemes)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5KCMUtils)
+BuildRequires:	cmake(KF5KIO)
+BuildRequires:	cmake(KF5Notifications)
+BuildRequires:	cmake(KF5Plasma)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5WindowSystem)
+BuildRequires:	cmake(KF5ItemViews)
 BuildRequires:	gettext
 BuildRequires:	kdelibs4-devel
 BuildRequires:	cups-devel
@@ -40,15 +53,13 @@ Printer management for KDE.
 
 %prep
 %setup -q -n print-manager-%{version}
+%cmake_kde5
 
 %build
-%cmake_kde5
 ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja install -C build
-
-
 
 
 %changelog
