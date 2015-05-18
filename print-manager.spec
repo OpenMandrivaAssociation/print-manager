@@ -1,6 +1,6 @@
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	15.04.0
+Version:	15.04.1
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -8,7 +8,6 @@ Url:		https://projects.kde.org/projects/playground/base/print-manager
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	print-manager.rpmlintrc
 BuildRequires:	cmake(ECM)
-BuildRequires:	ninja
 BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5ConfigWidgets)
 BuildRequires:	cmake(KF5CoreAddons)
@@ -60,7 +59,7 @@ Printer management for KDE.
 %cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
