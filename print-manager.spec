@@ -22,7 +22,7 @@ BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5ItemViews)
 BuildRequires:	gettext
-BuildRequires:	kdelibs4-devel
+BuildRequires:	kdelibs-devel
 BuildRequires:	cups-devel
 Requires:	kde-runtime
 Obsoletes:	kdeutils4-printer-applet < 4.10.0
