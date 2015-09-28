@@ -1,7 +1,7 @@
 Summary:	Printer management for KDE
 Name:		print-manager
 Version:	15.08.1
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
@@ -22,9 +22,7 @@ BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5WindowSystem)
 BuildRequires:	cmake(KF5ItemViews)
 BuildRequires:	gettext
-BuildRequires:	kdelibs-devel
 BuildRequires:	cups-devel
-Requires:	kde-runtime
 Obsoletes:	kdeutils4-printer-applet < 4.10.0
 Obsoletes:	system-config-printer-kde < 2:4.10.0
 Provides:	system-config-printer-kde = 2:%{version}-%{release}
