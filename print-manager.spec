@@ -1,11 +1,11 @@
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	15.12.3
+Version:	16.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/print-manager-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/applications/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	print-manager.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Config)
