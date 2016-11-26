@@ -42,6 +42,7 @@ Printer management for KDE.
 %{_datadir}/applications/org.kde.AddPrinter.desktop
 %{_datadir}/applications/org.kde.ConfigurePrinter.desktop
 %{_datadir}/applications/org.kde.PrintQueue.desktop
+%{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
 %{_datadir}/kservices5/*.desktop
 %{_datadir}/kservices5/kded/printmanager.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.qml
