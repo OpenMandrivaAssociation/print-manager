@@ -49,6 +49,7 @@ Printer management for KDE.
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/*.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/metadata.desktop
+%{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/metadata.json
 %{_datadir}/knotifications5/printmanager.notifyrc
 
 #----------------------------------------------------------------------------
