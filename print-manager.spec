@@ -1,6 +1,6 @@
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	16.08.3
+Version:	16.12.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
