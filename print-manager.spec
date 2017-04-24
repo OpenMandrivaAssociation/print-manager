@@ -1,11 +1,13 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
-Source0:	http://download.kde.org/stable/applications/%{version}/src/print-manager-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	print-manager.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Config)
@@ -30,7 +32,7 @@ Provides:	system-config-printer-kde = 2:%{version}-%{release}
 %description
 Printer management for KDE.
 
-%files
+%files -f all.lang
 %{_bindir}/configure-printer
 %{_bindir}/kde-add-printer
 %{_bindir}/kde-print-queue
@@ -63,3 +65,6 @@ Printer management for KDE.
 
 %install
 %ninja_install -C build
+%find_lang plasma_applet_org.kde.plasma.printmanager
+%find_lang print-manager
+cat *.lang >all.lang
