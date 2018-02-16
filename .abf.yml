@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   print-manager-17.12.1.tar.xz: ffef0bfce8c5b8e1b7a4aa95bd8655ae7617967e
+sources:
+  print-manager-17.12.2.tar.xz: a3d47cb32fe3207685e6a7c7e825706e7eaaacde
