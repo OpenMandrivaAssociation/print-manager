@@ -2,7 +2,7 @@
 
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	 17.12.2
+Version:	 18.04.2
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -41,7 +41,7 @@ Printer management for KDE.
 %{_libdir}/qt5/plugins/kded_printmanager.so
 %{_libdir}/qt5/qml/org/kde/plasma/printmanager/libprintmanager.so
 %{_libdir}/qt5/qml/org/kde/plasma/printmanager/qmldir
-%{_datadir}/applications/org.kde.AddPrinter.desktop
+%{_datadir}/applications/org.kde.kde-add-printer.desktop
 %{_datadir}/applications/org.kde.ConfigurePrinter.desktop
 %{_datadir}/applications/org.kde.PrintQueue.desktop
 %{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
