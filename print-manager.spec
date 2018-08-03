@@ -2,7 +2,7 @@
 
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	 18.07.80
+Version:	 18.07.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
