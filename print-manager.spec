@@ -2,8 +2,8 @@
 
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	 18.12.0
-Release:	1
+Version:	18.12.0
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
@@ -28,6 +28,8 @@ BuildRequires:	cups-devel
 Obsoletes:	kdeutils4-printer-applet < 4.10.0
 Obsoletes:	system-config-printer-kde < 2:4.10.0
 Provides:	system-config-printer-kde = 2:%{version}-%{release}
+# For driver auto-detection
+Recommends:	system-config-printer
 
 %description
 Printer management for KDE.
