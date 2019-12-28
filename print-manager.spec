@@ -2,12 +2,12 @@
 
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/print-manager-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/print-manager-%{version}.tar.xz
 Source1:	print-manager.rpmlintrc
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5Config)
