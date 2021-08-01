@@ -2,7 +2,7 @@
 
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	21.04.2
+Version:	21.07.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -51,7 +51,6 @@ Printer management for KDE.
 %{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
 %{_datadir}/metainfo/org.kde.print-manager.metainfo.xml
 %{_datadir}/kservices5/*.desktop
-%{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/*.qml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/metadata.desktop
