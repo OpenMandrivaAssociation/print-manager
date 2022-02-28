@@ -1,9 +1,9 @@
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 70 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 70 ] && echo -n un; echo -n stable)
 
 Summary:	Printer management for KDE
 Name:		print-manager
 Version:	21.12.2
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
@@ -31,7 +31,7 @@ Obsoletes:	kdeutils4-printer-applet < 4.10.0
 Obsoletes:	system-config-printer-kde < 2:4.10.0
 Provides:	system-config-printer-kde = 2:%{version}-%{release}
 # For driver auto-detection
-Recommends:	system-config-printer
+Requires:	system-config-printer-gui
 
 %description
 Printer management for KDE.
@@ -60,7 +60,7 @@ Printer management for KDE.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n print-manager-%{version}
+%autosetup
 %cmake_kde5
 
 %build
