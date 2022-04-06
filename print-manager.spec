@@ -2,8 +2,8 @@
 
 Summary:	Printer management for KDE
 Name:		print-manager
-Version:	21.12.2
-Release:	2
+Version:	22.03.80
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
@@ -41,21 +41,21 @@ Printer management for KDE.
 %{_bindir}/kde-add-printer
 %{_bindir}/kde-print-queue
 %{_libdir}/libkcupslib.so
-%{_libdir}/qt5/plugins/kcm_printer_manager.so
 %{_libdir}/qt5/plugins/kf5/kded/printmanager.so
 %{_libdir}/qt5/qml/org/kde/plasma/printmanager/libprintmanager.so
 %{_libdir}/qt5/qml/org/kde/plasma/printmanager/qmldir
+%{_datadir}/applications/kcm_printer_manager.desktop
 %{_datadir}/applications/org.kde.kde-add-printer.desktop
 %{_datadir}/applications/org.kde.ConfigurePrinter.desktop
 %{_datadir}/applications/org.kde.PrintQueue.desktop
 %{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
 %{_datadir}/metainfo/org.kde.print-manager.metainfo.xml
-%{_datadir}/kservices5/*.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/config/*.xml
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/contents/ui/*.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/metadata.desktop
 %{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager/metadata.json
 %{_datadir}/knotifications5/printmanager.notifyrc
+%{_libdir}/qt5/plugins/plasma/kcms/systemsettings_qwidgets/kcm_printer_manager.so
+
 
 #----------------------------------------------------------------------------
 
