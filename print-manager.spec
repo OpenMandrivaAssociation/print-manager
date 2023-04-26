@@ -3,7 +3,7 @@
 Summary:	Printer management for KDE
 Name:		print-manager
 Version:	23.04.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		https://projects.kde.org/projects/playground/base/print-manager
@@ -61,6 +61,10 @@ Printer management for KDE.
 
 %prep
 %autosetup
+
+# (tpg) adjust path for CUPS backends
+sed -i -e 's#/usr/lib#%{_libdir}#g' cmake/modules/FindCupsSmb.cmake
+
 %cmake_kde5
 
 %build
