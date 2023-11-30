@@ -15,6 +15,7 @@ Source0:	http://download.kde.org/%{stable}/plasma/%{version}/print-manager-%{ver
 %endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
+BuildRequires:	cmake(KF6Kirigami) >= 5.246.0
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(KF6NewStuff)
