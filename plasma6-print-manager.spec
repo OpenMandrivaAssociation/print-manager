@@ -1,0 +1,58 @@
+%define stable %([ "$(echo %{version} |cut -d. -f2)" -ge 80 ] && echo -n un; echo -n stable)
+#define git 20231130
+
+Summary:	Print manager for Plasma 6
+Name:		plasma6-print-manager
+Version:	5.90.0
+Release:	1
+License:	GPLv2+
+Group:		Graphical desktop/KDE
+Url:		https://invent.kde.org/plasma/print-manager
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/plasma/print-manager/-/archive/master/print-manager-master.tar.bz2#/print-manager-%{git}.tar.bz2
+%else
+Source0:	http://download.kde.org/%{stable}/plasma/%{version}/print-manager-%{version}.tar.xz
+%endif
+BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF6Kirigami2)
+BuildRequires:	cmake(Plasma) >= 5.90.0
+BuildRequires:	cmake(KF6NewStuff)
+BuildRequires:	cmake(KF6Declarative)
+BuildRequires:	cmake(KF6Notifications)
+BuildRequires:	cmake(KF6UserFeedback)
+BuildRequires:	pkgconfig(Qt6QuickControls2)
+
+%description
+Print manager for Plasma 6
+
+%prep
+%autosetup -p1 -n print-manager-%{?git:master}%{!?git:%{version}}
+%cmake \
+	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
+	-G Ninja
+
+%build
+%ninja_build -C build
+
+%install
+%ninja_install -C build
+
+%find_lang print-manager --all-name --with-html
+
+%files -f print-manager.lang
+%{_bindir}/configure-printer
+%{_bindir}/kde-add-printer
+%{_bindir}/kde-print-queue
+%{_libdir}/libkcupslib.so
+%{_qtdir}/plugins/kf6/kded/printmanager.so
+%{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_printer_manager.so
+%{_qtdir}/qml/org/kde/plasma/printmanager
+%{_datadir}/applications/kcm_printer_manager.desktop
+%{_datadir}/applications/org.kde.ConfigurePrinter.desktop
+%{_datadir}/applications/org.kde.PrintQueue.desktop
+%{_datadir}/applications/org.kde.kde-add-printer.desktop
+%{_datadir}/knotifications6/printmanager.notifyrc
+%{_datadir}/metainfo/org.kde.plasma.printmanager.appdata.xml
+%{_datadir}/metainfo/org.kde.print-manager.metainfo.xml
+%{_datadir}/plasma/plasmoids/org.kde.plasma.printmanager
+%{_datadir}/qlogging-categories6/pmlogs.categories
