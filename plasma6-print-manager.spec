@@ -14,13 +14,27 @@ Source0:	https://invent.kde.org/plasma/print-manager/-/archive/master/print-mana
 Source0:	http://download.kde.org/%{stable}/plasma/%{version}/print-manager-%{version}.tar.xz
 %endif
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(KF6NewStuff)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6UserFeedback)
+BuildRequires:	cmake(KF6Config)
+BuildRequires:	cmake(KF6ConfigWidgets)
+BuildRequires:	cmake(KF6CoreAddons)
+BuildRequires:	cmake(KF6DBusAddons)
+BuildRequires:	cmake(KF6IconThemes)
+BuildRequires:	cmake(KF6I18n)
+BuildRequires:	cmake(KF6KCMUtils)
+BuildRequires:	cmake(KF6Kirigami)
+BuildRequires:	cmake(KF6KIO)
+BuildRequires:	cmake(KF6Notifications)
+BuildRequires:	cmake(KF6WidgetsAddons)
+BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	pkgconfig(Qt6QuickControls2)
+BuildRequires:	pkgconfig(cups)
 
 %description
 Print manager for Plasma 6
