@@ -15,6 +15,7 @@ Source0:	http://download.kde.org/%{stable}/plasma/%{version}/print-manager-%{ver
 %endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
+BuildRequires:	cmake(Qt6Core5Compat)
 BuildRequires:	cmake(KF6Kirigami) >= 5.246.0
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(KF6KirigamiAddons)
@@ -29,6 +30,7 @@ BuildRequires:	cmake(KF6ConfigWidgets)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6IconThemes)
+BuildRequires:	%mklibname -d KF6IconWidgets
 BuildRequires:	cmake(KF6I18n)
 BuildRequires:	cmake(KF6KCMUtils)
 BuildRequires:	cmake(KF6KIO)
