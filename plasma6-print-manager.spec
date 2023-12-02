@@ -17,6 +17,7 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(KF6Kirigami) >= 5.246.0
 BuildRequires:	cmake(KF6Kirigami2)
+BuildRequires:	cmake(KF6KirigamiAddons)
 BuildRequires:	cmake(Plasma) >= 5.90.0
 BuildRequires:	cmake(PlasmaQuick)
 BuildRequires:	cmake(KF6NewStuff)
