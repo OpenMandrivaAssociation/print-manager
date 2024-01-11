@@ -3,7 +3,7 @@
 
 Summary:	Print manager for Plasma 6
 Name:		plasma6-print-manager
-Version:	5.91.0
+Version:	5.92.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -61,7 +61,7 @@ Print manager for Plasma 6
 %{_bindir}/configure-printer
 %{_bindir}/kde-add-printer
 %{_bindir}/kde-print-queue
-%{_libdir}/libkcupslib.so
+%{_libdir}/libkcupslib.so*
 %{_qtdir}/plugins/kf6/kded/printmanager.so
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_printer_manager.so
 %{_qtdir}/qml/org/kde/plasma/printmanager
