@@ -6,7 +6,7 @@
 Summary:	Print manager for Plasma 6
 Name:		plasma6-print-manager
 Version:	6.0.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/print-manager
@@ -41,6 +41,10 @@ BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	pkgconfig(Qt6QuickControls2)
 BuildRequires:	pkgconfig(cups)
+Requires:	cups
+# print-manager relies on the s-c-p DBus service to configure printers
+# without extra authentication
+Requires:	system-config-printer
 
 %description
 Print manager for Plasma 6
