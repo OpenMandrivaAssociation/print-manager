@@ -45,25 +45,18 @@ Requires:	cups
 # print-manager relies on the s-c-p DBus service to configure printers
 # without extra authentication
 Requires:	system-config-printer
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Print manager for Plasma 6
 
-%prep
-%autosetup -p1 -n print-manager-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
+%prep -a
+# Make sure gzipped ppd files (that are handled by cups and packaged
+# accordingly) are shown in the PPD selector dialog
+sed -i -e 's,(\*\.ppd),(*.ppd *.ppd.gz),g' src/kcm/ui/MakeModel.qml po/*/kcm_printer_manager.po
 
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-
-%find_lang print-manager --all-name --with-html
-
-%files -f print-manager.lang
+%files -f %{name}.lang
 %{_bindir}/configure-printer
 %{_bindir}/kde-add-printer
 %{_bindir}/kde-print-queue
