@@ -5,8 +5,8 @@
 
 Summary:	Print manager for Plasma 6
 Name:		plasma6-print-manager
-Version:	6.2.4
-Release:	2
+Version:	6.2.5
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/print-manager
