@@ -4,9 +4,9 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 
 Summary:	Print manager for Plasma 6
-Name:		plasma6-print-manager
+Name:		print-manager
 Version:	6.3.4
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/print-manager
@@ -47,6 +47,8 @@ Requires:	cups
 Requires:	system-config-printer
 BuildSystem:	cmake
 BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+# Renamed after 6.0 2025-05-03
+%rename plasma6-print-manager
 
 %description
 Print manager for Plasma 6
