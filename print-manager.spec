@@ -5,7 +5,7 @@
 
 Summary:	Print manager for Plasma 6
 Name:		print-manager
-Version:	6.6.5
+Version:	6.7.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -60,14 +60,14 @@ sed -i -e 's,(\*\.ppd),(*.ppd *.ppd.gz),g' src/kcm/ui/MakeModel.qml po/*/kcm_pri
 
 %files -f %{name}.lang
 %{_bindir}/configure-printer
-%{_bindir}/kde-print-queue
+%{_bindir}/plasma-print-queue
 %{_qtdir}/plugins/kf6/kded/printmanager.so
 %{_qtdir}/plugins/plasma/applets/org.kde.plasma.printmanager.so
 %{_qtdir}/plugins/plasma/kcms/systemsettings/kcm_printer_manager.so
 %{_qtdir}/qml/org/kde/plasma/printmanager
 %{_datadir}/applications/kcm_printer_manager.desktop
 %{_datadir}/applications/org.kde.ConfigurePrinter.desktop
-%{_datadir}/applications/org.kde.PrintQueue.desktop
+%{_datadir}/applications/org.kde.plasma.printqueue.desktop
 %{_datadir}/knotifications6/printmanager.notifyrc
 %{_datadir}/metainfo/org.kde.print-manager.metainfo.xml
 %{_datadir}/qlogging-categories6/pmlogs.categories
