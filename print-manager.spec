@@ -43,6 +43,7 @@ BuildRequires:	cmake(KF6WindowSystem)
 BuildRequires:	cmake(packagekitqt6)
 BuildRequires:	pkgconfig(Qt6QuickControls2)
 BuildRequires:	pkgconfig(cups)
+BuildRequires:	qml(org.kde.kitemmodels)
 # For smb printer detection
 BuildRequires:	samba-client
 Requires:	cups
