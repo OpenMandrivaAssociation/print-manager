@@ -18,6 +18,7 @@ Source0:	http://download.kde.org/%{stable}/plasma/%{version}/print-manager-%{ver
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core5Compat)
+BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(KF6Kirigami) >= 5.246.0
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(KF6KirigamiAddons)
@@ -39,8 +40,11 @@ BuildRequires:	cmake(KF6KIO)
 BuildRequires:	cmake(KF6Notifications)
 BuildRequires:	cmake(KF6WidgetsAddons)
 BuildRequires:	cmake(KF6WindowSystem)
+BuildRequires:	cmake(packagekitqt6)
 BuildRequires:	pkgconfig(Qt6QuickControls2)
 BuildRequires:	pkgconfig(cups)
+# For smb printer detection
+BuildRequires:	samba-client
 Requires:	cups
 # print-manager relies on the s-c-p DBus service to configure printers
 # without extra authentication
