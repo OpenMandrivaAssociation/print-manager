@@ -6,7 +6,7 @@
 Summary:	Print manager for Plasma 6
 Name:		print-manager
 Version:	6.8.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://invent.kde.org/plasma/print-manager
@@ -15,6 +15,9 @@ Source0:	https://invent.kde.org/plasma/print-manager/-/archive/%{gitbranch}/prin
 %else
 Source0:	http://download.kde.org/%{stable}/plasma/%{version}/print-manager-%{version}.tar.xz
 %endif
+# Raise the printer configuration and CUPS password dialogs on X11.
+# Wayland still uses requestActivate().
+Patch0:		print-manager-6.8.1-x11-activate.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Core5Compat)
